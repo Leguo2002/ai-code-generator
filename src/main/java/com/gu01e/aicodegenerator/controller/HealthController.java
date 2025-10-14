@@ -1,5 +1,7 @@
 package com.gu01e.aicodegenerator.controller;
 
+import com.gu01e.aicodegenerator.common.BaseResponse;
+import com.gu01e.aicodegenerator.common.ResultUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,8 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/health")
 public class HealthController {
+
     @GetMapping("/")
-    public String health() {
-        return "I'm fine";
+    public BaseResponse<String> healthCheck() {
+        return ResultUtils.success( "ok");
     }
 }

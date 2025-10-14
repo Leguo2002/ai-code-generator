@@ -1,9 +1,6 @@
 package com.gu01e.aicodegenerator.exception;
 
 /**
- * The type Throw utils.
- *
- * @className: ThrowUtils
  * @Description: 异常工具类
  * @version: v1.0
  * @author: GUOLE

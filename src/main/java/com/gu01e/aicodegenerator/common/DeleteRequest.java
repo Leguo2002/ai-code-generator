@@ -1,11 +1,14 @@
 package com.gu01e.aicodegenerator.common;
 
-/**
- * @className: DeleteRequest
- * @Description: 删除请求
- * @version: v1.0
- * @author: GUOLE
- * @date: 2025/10/10 22:42
- */
-public class DeleteRequest {
+
+import lombok.Data;
+
+import java.io.Serializable;
+
+@Data
+public class DeleteRequest implements Serializable {
+
+    private Long id;
+
+    private static final long serialVersionUID = 1L;
 }
