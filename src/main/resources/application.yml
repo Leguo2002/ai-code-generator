@@ -1,17 +1,37 @@
 spring:
+  profiles:
+    active: local
   application:
     name: ai-code-generator
+  datasource:
+    driver-class-name: ${jdbc.driver-class-name}
+    url: ${jdbc.url}
+    username: ${jdbc.username}
+    password: ${jdbc.password}
+
 server:
   port: 8123
   servlet:
       context-path: /api
+
 # springdoc-openapi
 springdoc:
   group-configs:
     - group: 'default'
       packages-to-scan: com.gu01e.aicodegenerator.controller
+
 # knife4j
 knife4j:
   enable: true
   setting:
     language: zh_cn
+
+# jwt密钥、过期时间、token名称
+ai:
+  jwt:
+    admin-secret-key: gu01e
+    admin-ttl: 7200000
+    admin-token-name: admin_token
+    user-secret-key: e10ug
+    user-ttl: 7200000
+    user-token-name: user_token
